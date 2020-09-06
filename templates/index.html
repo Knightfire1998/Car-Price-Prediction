@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="jumbotron jumbotron-fluid  bg-dark text-white">
+        <div class="container">
+            <h1 Color = "Blue" align="center">Car Price Estimator</h1>      
+        </div>
+  </div>
+
+    <div class = "container">
+       
+        
+        <div >
+            
+                
+
+               
+                    <form  action="{{ url_for('predict')}}" method="post">
+                            <div class="row">
+                                <div class="col">
+                                <label  for = "Year"><h3 class="text-primary">Year</h3></label>
+                                <input  class="form-control" id="first" name="Year" type="number ">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class ="form-group">
+                                    <label ><h3 class="text-primary">How Many Kms Drived?</h3></label>
+                                    <input class="form-control" id="third" name="Kms_Driven" required="required">
+                                </div>  
+                                </div>
+                            </div>
+
+                            
+                            
+
+
+                            
+                            
+
+                             
+            
+                
+                            
+            
+                <div class="form-row">
+                <div class="col">
+                <h3 class="text-primary">No of owners (0 or 1 or 3) ? </h3>                 
+                            <div class ="form-group">
+                                 <input class="form-control" id="fourth" name="Owner" required="required">
+                            </div>
+                </div>
+                </div>
+            
+                <div class="form-row">
+                <div class="col">
+                
+                <h3 class="text-primary">What Is the Fuel type?</h3>
+            
+                            <div class = "form-group">
+
+                                <select class="form-control" name="Fuel_Type_Petrol" id="fuel" required="required">
+                                    <option class="dropdown-item" value="Petrol">Petrol</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Diesel">CNG</option>
+                                </select>
+                            </div>
+                </div>
+                </div>
+
+                <div class="form-row">
+                <div class="col">
+                <h3 class="text-primary">Are you A Dealer or Individual</h3><br>
+                            <div class = "form-group">
+                                 <select  class="form-control" name="Seller_Type_Individual" id="resea" required="required">
+                                    <option value="Dealer">Dealer</option>
+                                    <option value="Individual">Individual</option>
+                                 </select>
+                            </div>
+
+                </div>
+                </div>
+
+                <div class="form-row">
+                <div class="col">
+                <h3 class="text-primary">Transmission type</h3><br>
+                            <div class = "form-group">
+                                <select class="form-control" name="Transmission_Mannual" id="research" required="required">
+                                    <option value="Mannual">Manual Car</option>
+                                    <option value="Automatic">Automatic Car</option>
+                                </select>
+                            </div>
+                </div>
+                </div>
+
+                <div class="form-row">
+                                <div class="col">
+                                    <label><h3 class="text-primary" >What is the Showroom Price?(In lakhs)</h3></label>
+                                    <input id="second" name="Present_Price" required="required">
+                                </div>
+                            </div>
+                               
+                <div class="form-row">
+                <div class="col">
+                            <div class = "form-group"> 
+                                <button class= "btn btn-primary" id="sub" type="submit ">Calculate</button> 
+                            </div>
+                            
+                </div>
+                </div>
+                
+                <div class="form-row">
+                <div class="col">
+                            <div class = "form-group"> 
+                                <h3 class="text-primary">{{ prediction_text }}</h3>
+                            </div>
+
+                </div>
+                </div>
+           
+
+        </form>
+
+
+
+       
+            
+        </div>
+    </div>
+
+   
+
+
+
+  
+</body>
+
+</html>
