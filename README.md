@@ -25,3 +25,4 @@ Run the caprediction.py
     3.Can be deployed on any web servers such as Heroku, AWS, Azure.
     4.It predicts the selling price of the car based on the before mentioned attributes and displays it on the same page.
     4.This app is deployed on Heroku.
+#### Link of the heroku app https://car-price-estimator-v1.herokuapp.com/
