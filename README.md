@@ -17,3 +17,12 @@ On basis of features such as : 'Selling_Price', 'Present_Price', 'Kms_Driven', '
 Use requirements.txt for installing dependencies.  
 Make a folder named as 'Data' in the working directory and put all the csv files in that folder  
 Run the caprediction.py
+
+# Additional woek (Deployment):
+    
+    1.Created a web-based application for car price prediction using FLASK
+    2.Designed the web page using Html, Bootstrap.
+    3.Can be deployed on any web servers such as Heroku, AWS, Azure.
+    4.It predicts the selling price of the car based on the before mentioned attributes and displays it on the same page.
+    4.This app is deployed on Heroku.
+#### Link of the heroku app https://car-price-estimator-v1.herokuapp.com/
